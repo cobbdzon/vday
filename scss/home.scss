@@ -1,4 +1,51 @@
+@import './global';
+
 body {
-    background-color: black;
-    color: white; 
+    background-color: hsl(350, 100%, 88%);
+}
+
+#greeter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1rem;
+
+    .greeter-content {
+        animation: greeter-reveal 2s cubic-bezier(.29,1.58,.27,1.68) 1s forwards;
+
+        transform: rotateX(135deg) perspective(600px);
+        transform-origin: center top;
+        transform-style: preserve-3d;
+
+        @keyframes greeter-reveal {
+            100% {
+                transform: rotateX(0deg);
+            }
+        }
+
+        .greeter-hangers {
+            display: flex;
+            justify-content: space-around;
+
+            div {
+                width: 0.45em;
+                height: 1.5em;
+
+                background-color: white;
+            }
+        }
+        .greeter-board {
+            padding: 0.25em 0.5em 0.25em 0.5em;
+
+            background-color: hsl(16, 50%, 55%);
+
+            font-size: 3em;
+            color: hsl(330, 100%, 90%);
+            font-family: $font-darling;
+            text-align: center;
+
+            text-shadow: 0.05em 0.05em hsl(330, 100%, 71%);
+        }
+    }
 }

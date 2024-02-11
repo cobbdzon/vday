@@ -1,0 +1,22 @@
+@use 'sass:color';
+
+@import url(https://cdn.jsdelivr.net/gh/aritmatica/cdn@main/fonts/ldfcomicsans/stylesheet.css);
+
+// darling font
+@font-face {
+    font-family: 'Darling';
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/aritmatica/cdn@main/fonts/Darling.ttf) format('truetype');
+}
+
+// fonts
+$font-darling: Darling;
+$font-regular: ldfcomicsans-medium, arial, sans-serif;
+$font-bold: ldfcomicsans-bold, arial, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+	font-family: $font-regular;
+    box-sizing: border-box;
+}
