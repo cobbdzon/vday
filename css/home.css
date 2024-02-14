@@ -13,7 +13,7 @@
 
 body {
   background-color: hsl(330, 100%, 76%);
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 img {
@@ -26,6 +26,9 @@ img {
   shape-margin: 1rem;
 }
 
+#gallery .gallery-carousel .flickity-viewport {
+  overflow: hidden;
+}
 #gallery .gallery-carousel .cell {
   width: 100%;
   height: 100vh;
@@ -38,6 +41,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1em;
 }
 #gallery .gallery-carousel .cell .cell-content .title {
   font-size: 3em;
@@ -47,7 +51,44 @@ img {
   text-shadow: 0.05em 0.05em hsl(330, 100%, 71%);
 }
 #gallery .gallery-carousel .cell .cell-content img {
-  max-width: 512px;
+  max-width: min(100%, 512px);
+}
+#gallery .gallery-carousel .cell .cell-content .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#gallery .gallery-carousel .cell .cell-content .buttons button {
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
+
+#thanks {
+  background-color: hsla(330, 100%, 76%, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+#thanks .thanks-content {
+  max-width: 1024px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#thanks .thanks-content .text {
+  font-size: min(3em, 8vw);
+  color: #fff;
+  font-family: ldfcomicsans-bold, arial, sans-serif;
+  text-align: center;
+  text-shadow: 0.05em 0.05em hsl(330, 100%, 51%);
 }
 
 #greeter {

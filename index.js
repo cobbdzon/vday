@@ -23,4 +23,15 @@ function setupFlickity() {
     console.log("farted")
 }
 
-DOMContentLoaded().then(setupFlickity)
+function setupButtons() {
+    const thanks_screen = document.getElementById("thanks")
+    const buttons = document.body.getElementsByClassName("yes-button")
+    for (let i = 0; i < buttons.length; i++) {
+        const btn = buttons[i];
+        btn.onclick = () => {
+            thanks_screen.style.opacity = 1
+        }
+    }
+}
+
+DOMContentLoaded().then(setupFlickity).then(setupButtons)
